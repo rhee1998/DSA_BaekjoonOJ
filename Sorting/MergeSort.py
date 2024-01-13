@@ -15,11 +15,9 @@ def MergeSort(A):
 
     while fidx < L//2 and bidx < L - L//2:
         if F[fidx] < B[bidx]:
-            R.append(F[fidx])
-            fidx += 1
+            R.append(F[fidx]); fidx += 1
         else:
-            R.append(B[bidx])
-            bidx += 1
+            R.append(B[bidx]); bidx += 1
     
     R += F[fidx:] + B[bidx:]
     return R
