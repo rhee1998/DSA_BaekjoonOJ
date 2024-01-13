@@ -1,8 +1,8 @@
 # **Graph Algorithms**
-### **Minimum Spanning Tree (MST)**
-##### **Prim Algorithm**
+## **Minimum Spanning Tree (MST)**
+### **Prim Algorithm**
 * Time complexity : $\cal{O}$ $(V^2)$
-##### **Kruskal's Algorithm**
+#### **Kruskal's Algorithm**
 * Algorithm
   * Sort all edges in ascending order by their lengths.
   * Choose the edge with the least length.
