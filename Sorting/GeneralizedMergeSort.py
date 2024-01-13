@@ -12,7 +12,7 @@ def Compare(x, y):
         if x[idx] < y[idx]: return True
         elif x[idx] > y[idx]: return False
         else: idx += 1
-    return False
+    return True
 
 def GeneralizedMergeSort(A):
     # --------------------------------------------------
