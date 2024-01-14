@@ -6,7 +6,7 @@
 * Compatible with *directional graphs* containing negative-valued edges $\rightarrow$ *negative cycle detection*
 
 #### **Algorithm**
-1. Initialize minimum distance array
+1. Initialize minimum distance array with a sufficiently large number `INF`
 2. For each *edge* starting from `s` to `e`, update *minimum distance* for `e`
 3. Iterate $V$ times
 4. If *minimum distance array* is updated in the last iteration, *negative cycle* exists
