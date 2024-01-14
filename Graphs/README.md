@@ -3,7 +3,7 @@
 ## **Dijkstra's Algorithm**
 ### **1. $\cal{O}$ $(V^2)$ Solution**
 #### **Algorithm**
-1. Initialize minimum distances `dists` from *start node* to other nodes by `inf`, a sufficiently large number
+1. Initialize minimum distances `dists` from *start node* to other nodes by `INF`, a sufficiently large number
 2. Select the node with the least minimum distance from *start node* as *current node*
 3. For each node adjacent to *current node*, update `dists` if possible
 4. Iterate
