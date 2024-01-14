@@ -47,7 +47,7 @@
 
 
 ## **Minimum Spanning Tree (MST)**
-### **1. Kruskal Algorithm**
+### **1. Kruskal's Algorithm**
 * Algorithm
   * Sort all edges in ascending order by their lengths.
   * Choose the edge with the smallest length.
@@ -57,7 +57,7 @@
 * Time complexity : $\cal{O}$ $(E \log E)$
 * Useful for *sparse graphs* with relatively less $E$ compared with $V^2$
 
-### **2. Prim Algorithm**
+### **2. Prim's Algorithm**
 * Algorithm
   * Choose a random node to start
   * Choose an edge with the smallest length from the edges connected to the visited node(s)
