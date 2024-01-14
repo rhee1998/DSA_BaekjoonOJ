@@ -28,4 +28,4 @@
 * Refer to [LinearAlgebra/Power_of_Matrix](https://github.com/rhee1998/DSA_BaekjoonOJ/tree/main/LinearAlgebra)
 
 ### **3. Sum of Power of Matrix**
-* Refer to [LinearAlgebra/Power_of_Matrix](https://github.com/rhee1998/DSA_BaekjoonOJ/tree/main/LinearAlgebra)
+* Refer to [LinearAlgebra/Sum_of_Power_of_Matrix](https://github.com/rhee1998/DSA_BaekjoonOJ/tree/main/LinearAlgebra)
