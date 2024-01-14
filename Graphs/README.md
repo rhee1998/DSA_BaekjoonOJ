@@ -11,10 +11,10 @@
 3. Iterate $V$ times
 4. If *minimum distance array* is updated in the last iteration, *negative cycle* exists
 
-#### **Time Complexity**
-* $\cal{O}$ $(VE)$ for all cases
+#### **Computational Complexity**
+* Time complexity : $\cal{O}$ $(VE)$ for all cases
 
-#### **Functions**
+#### **Function(s)**
 `def BellmanFord(start, N, graph, dist, INF=10**30)`
 * Input(s)
 * Output(s)
@@ -33,7 +33,7 @@
 #### **Algorithm**
 * Implements *priority queue* for efficient searching of the node with least minimum distance
 
-#### **Functions**
+#### **Function(s)**
 `def Dijkstra(start, N, G, INF=10**30)`
 * Input(s)
   * `start (int)` : Starting node ID
@@ -51,23 +51,35 @@
 
 ## **Minimum Spanning Tree (MST)**
 ### **1. Kruskal's Algorithm**
-* Algorithm
-  * Sort all edges in ascending order by their lengths.
-  * Choose the edge with the smallest length.
-  * Add to MST if the nodes consisting of the edge are from distinct *disjoint sets* : *<u>Union-Find</u>*
-  * Continue if the nodes originate from the same *disjoint set*
-  * Iterate
-* Time complexity : $\cal{O}$ $(E \log E)$
+#### **Usage**
+* Finds a connected subgraph (tree) that has the least sum of edge values
 * Useful for *sparse graphs* with relatively less $E$ compared with $V^2$
 
+#### **Algorithm**
+1. Sort all edges in ascending order by their lengths.
+2. Choose the edge with the smallest length.
+3. Add to MST if the nodes consisting of the edge are from distinct *disjoint sets* : *<u>Union-Find</u>*
+4. Continue if the nodes originate from the same *disjoint set*
+5. Iterate
+
+#### **Computational Complexity**
+* Time complexity : $\cal{O}$ $(E \log E)$
+
+
 ### **2. Prim's Algorithm**
-* Algorithm
-  * Choose a random node to start
-  * Choose an edge with the smallest length from the edges connected to the visited node(s)
-  * Add the new node to the set of visited node(s)
-  * Iterate
-* Time complexity : $\cal{O}$ $(V^2)$
+#### **Usage**
+* Finds a connected subgraph (tree) that has the least sum of edge values
 * Useful for *dense graphs* with relatively large $E$ where it is comparable to $V^2$
 
+#### **Algorithm**
+1. Choose a random node to start
+2. Choose an edge with the smallest length from the edges connected to the visited node(s)
+3. Add the new node to the set of visited node(s)
+4. Iterate
+
+#### **Computational Complexity**
+* Time complexity : $\cal{O}$ $(V^2)$
 
 
+## **Union-Find**
+//TODO
