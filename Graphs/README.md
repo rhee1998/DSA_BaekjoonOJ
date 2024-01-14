@@ -2,14 +2,31 @@
 
 ## **Dijkstra's Algorithm**
 ### **1. $\cal{O}$ $(V^2)$ Solution**
-* Algorithm
-  * Initialize minimum distances `dists` from *start node* to other nodes by `inf`, a sufficiently large number
-  * Select the node with the least minimum distance from *start node* as *current node*
-  * For each node adjacent to *current node*, update `dists` if possible
-  * Iterate
+#### **Algorithm**
+1. Initialize minimum distances `dists` from *start node* to other nodes by `inf`, a sufficiently large number
+2. Select the node with the least minimum distance from *start node* as *current node*
+3. For each node adjacent to *current node*, update `dists` if possible
+4. Iterate
 
 ### **2. $\cal{O}$ $((V + E) \log V)$ Solution**
+#### **Algorithm**
 * Implements *priority queue* for efficient searching of the node with least minimum distance
+
+#### **Functions**
+`def Dijkstra(start, N, G, INF=10**30)`
+* Input(s)
+  * `start (int)` : Starting node ID
+  * `N (int)` : Number of nodes in graph, each labeled from `0` to `N - 1`
+  * `G (int)` : "`a` $\rightarrow$ `b` at cost `c`" encoded as `G[a].append((b, c))`
+* Output(s)
+  * `dists (list)` : List of minimum distances from `start` to each node
+
+`def Dijkstra_path(start, N, G, INF=10**30)`
+* Input(s) : same with `Dijkstra(start, N, G, INF=10**30)`
+* Output(s)
+  * `dists (list)` : List of minimum distances from `start` to each node
+  * `paths (list)` : One of minimum distance paths from `start` to each node
+
 
 ## **Minimum Spanning Tree (MST)**
 ### **1. Kruskal Algorithm**
