@@ -21,7 +21,7 @@
 * Output(s)
   * `dists (list)` : List of minimum distances from `start` to each node
 
-`def Dijkstra_path(start, N, G, INF=10**30)`
+`def DijkstraPath(start, N, G, INF=10**30)`
 * Input(s) : same with `Dijkstra(start, N, G, INF=10**30)`
 * Output(s)
   * `dists (list)` : List of minimum distances from `start` to each node
