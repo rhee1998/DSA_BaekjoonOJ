@@ -1,10 +1,10 @@
 # **Sorting Algorithms**
 ## **Merge Sort**
 ### **1. Simple Merge Sort**
-#### Algorithm
+#### **Algorithm**
 * *divide and conquer*
 
-#### Time Complexity
+#### **Time Complexity**
 * Average : $\cal{O}$ $(N \log N)$
 * Worst case : $\cal{O}$ $(N \log N)$
 
