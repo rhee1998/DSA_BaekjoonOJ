@@ -6,7 +6,7 @@
 #### **Computational Complexity**
 #### **Function(s)**
 
-## **Euler's $phi$**
+## **Euler's $\phi$**
 #### **Usage**
 #### **Algorithm**
 #### **Computational Complexity**
