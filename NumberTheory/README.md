@@ -25,11 +25,7 @@
 #### **Function(s)**
 
 ### **2. Power of Matrix**
-#### **Algorithm**
-#### **Computational Complexity**
-#### **Function(s)**
+* Refer to [LinearAlgebra/Power_of_Matrix](https://github.com/rhee1998/DSA_BaekjoonOJ/tree/main/LinearAlgebra)
 
 ### **3. Sum of Power of Matrix**
-#### **Algorithm**
-#### **Computational Complexity**
-#### **Function(s)**
+* Refer to [LinearAlgebra/Power_of_Matrix](https://github.com/rhee1998/DSA_BaekjoonOJ/tree/main/LinearAlgebra)
