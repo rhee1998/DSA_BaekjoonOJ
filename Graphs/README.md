@@ -11,6 +11,9 @@
 3. Iterate $V$ times
 4. If *minimum distance array* is updated in the last iteration, *negative cycle* exists
 
+#### **Time Complexity**
+* $\cal{O}$ $(VE)$ for all cases
+
 #### **Functions**
 `def BellmanFord(start, N, graph, dist, INF=10**30)`
 * Input(s)
