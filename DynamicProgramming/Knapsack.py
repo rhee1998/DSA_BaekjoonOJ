@@ -10,12 +10,14 @@ def Knapsack(WMAX, W, V):
     # - V (list) : [0] + list of values
     # Output(s) : maximum total value
     # --------------------------------------------------
+    prev = [0 for _ in range(WMAX + 1)]
     curr = [0 for _ in range(WMAX + 1)]
     for i in range(1, len(W)):
-        prev = curr
         for wmax in range(WMAX + 1):
             if W[i] > wmax:
                 curr[wmax] = prev[wmax]
             else:
                 curr[wmax] = max([prev[wmax], prev[wmax - W[i]] + V[i]])
-    return curr[-1]
+
+        prev, curr = curr, [0 for _ in range(WMAX + 1)]
+    return prev[-1]
