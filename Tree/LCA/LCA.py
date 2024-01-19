@@ -12,8 +12,6 @@ N = int(input())
 INF = 10**30
 MIN, MAX, K = INF, 0, math.ceil(math.log2(N))
 sparse = [[None for _ in range(N)] for _ in range(K + 1)]
-sp_min = [[MIN for _ in range(N)] for _ in range(K + 1)]
-sp_max = [[MAX for _ in range(N)] for _ in range(K + 1)]
 
 visited = [False for _ in range(N)]
 rank = [0 for _ in range(N)]
