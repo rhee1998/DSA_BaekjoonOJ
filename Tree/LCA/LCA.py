@@ -34,8 +34,6 @@ for k in range(len(sparse) - 1):
     for i in range(N):
         x = sparse[k][i]
         sparse[k + 1][i] = sparse[k][x]
-        sp_min[k + 1][i] = min([sp_min[k][i], sp_min[k][x]])
-        sp_max[k + 1][i] = max([sp_max[k][i], sp_max[k][x]])
 
 # Move up n steps from x
 def MoveUp(x, n):
