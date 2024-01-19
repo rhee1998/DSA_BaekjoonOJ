@@ -6,7 +6,9 @@ import sys, math
 from collections import deque
 input = sys.stdin.readline
 
+# Define N and G here
 N = int(input())
+G = {}
 
 # Define Sparse Array
 INF = 10**30
