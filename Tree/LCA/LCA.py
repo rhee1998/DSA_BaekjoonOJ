@@ -6,25 +6,27 @@ import sys, math
 from collections import deque
 input = sys.stdin.readline
 
-# Define N and G here
 N = int(input())
-G = {}
+G = {v : [] for v in range(N)}
+for _ in range(N - 1):
+    a, b = map(int, input().split())
+    a, b = a - 1, b - 1
+    G[a].append(b); G[b].append(a)
 
 # Define Sparse Array
 INF = 10**30
 MIN, MAX, K = INF, 0, math.ceil(math.log2(N))
 sparse = [[None for _ in range(N)] for _ in range(K + 1)]
-
-visited = [False for _ in range(N)]
 rank = [0 for _ in range(N)]
 
 # BFS to obtain sparse[0] & rank
+visited = [False for _ in range(N)]
 sparse[0][0], visited[0] = 0, True
 que = deque([0])
 
 while que:
     curr = que.popleft()
-    for next, cost in G[curr]:
+    for next in G[curr]:
         if visited[next] == True: continue
         
         sparse[0][next] = curr
@@ -65,3 +67,6 @@ def LCA(x, y):
 
     assert sparse[0][x] == sparse[0][y]
     return sparse[0][x]
+
+# Query
+# Build Query Here
