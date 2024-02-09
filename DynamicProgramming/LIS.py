@@ -12,7 +12,7 @@ def LIS(A):
     # Output(s)
     # - lis : longest increasing subsequence
     # ==================================================
-    
+
     loc, tmp = [], []
     for i, a in enumerate(A):
         if tmp == [] or a > tmp[-1]:
@@ -30,7 +30,7 @@ def LIS(A):
         tmp[lo] = a
 
     lis, idx = deque([]), len(tmp) - 1
-    for i in range(N - 1, -1, -1):
+    for i in range(len(A) - 1, -1, -1):
         if loc[i] == idx:
             lis.appendleft(A[i])
             idx -= 1
