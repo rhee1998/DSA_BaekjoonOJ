@@ -1,6 +1,6 @@
-# ==== #
-# Trie #
-# ==== #
+# ================== #
+# Trie = Prefix Tree #
+# ================== #
 
 import sys
 from collections import deque
