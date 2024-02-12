@@ -43,3 +43,18 @@ def AddElement(trie, x):
     except: trie[ch] = GenerateTrie(x)
 
     return trie
+
+def ListToTrie(A):
+    # ==================================================
+    # Input(s)
+    # - A : list of strings
+    #
+    # Output(s)
+    # - trie : resulting trie
+    # ==================================================
+    A = [StringToDeque(x) for x in A]
+    trie = {}
+    for x in A:
+        AddElement(trie, x)
+    
+    return trie
