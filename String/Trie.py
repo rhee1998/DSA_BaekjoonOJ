@@ -52,9 +52,8 @@ def ListToTrie(A):
     # Output(s)
     # - trie : resulting trie
     # ==================================================
-    A = [StringToDeque(x) for x in A]
     trie = {}
     for x in A:
-        trie = AddElement(trie, x)
+        trie = AddElement(trie, StringToDeque(x))
     
     return trie
