@@ -1,6 +1,6 @@
 # **Number Theory (Alphabetical Order)**
 
-## **Erastosthenes' Sieve**
+## **Sieve of Erathosthenes**
 #### **Usage**
 #### **Algorithm**
 #### **Computational Complexity**
