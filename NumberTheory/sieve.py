@@ -10,7 +10,6 @@ def Sieve(N):
     # Output(s)
     # - is_prime : is_prime[idx] = 1 if idx is prime, otherwise 0
     # ==================================================
-    
     is_prime = [0, 0] + [1] * (N - 1)
     
     for i in range(2, N + 1):
