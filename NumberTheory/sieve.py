@@ -13,9 +13,9 @@ def Sieve(N):
     
     is_prime = [0, 0] + [1] * (N - 1)
     
-    for i in range(2, MAX + 1):
+    for i in range(2, N + 1):
         if is_prime[i] == 1:
-            for j in range(i * 2, MAX + 1, i):
+            for j in range(i * 2, N + 1, i):
                 is_prime[j] = 0
 
     return is_prime
