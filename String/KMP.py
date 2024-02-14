@@ -5,6 +5,13 @@ import sys
 input = sys.stdin.readline
 
 def FailListKMP(P):
+    # ==================================================
+    # Input(s)
+    # - P    : pattern of interest
+    #
+    # Output(s)
+    # - fail : fail[j] is maximum of k <= j such that P[:k] == P[j-k+1:j+1]
+    # ==================================================
     assert len(P) > 0
     fail = [0 for _ in range(len(P))]
 
