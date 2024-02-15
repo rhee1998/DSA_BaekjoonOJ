@@ -26,7 +26,7 @@ def GeneralizedMergeSort(A):
     B = GeneralizedMergeSort(A[L//2:])
     fidx, bidx, R = 0, 0, []
 
-    while fidx < L//2 and bidx <= L - L//2:
+    while fidx < L//2 and bidx < L - L//2:
         if Compare(F[fidx], B[bidx]):
             R.append(F[fidx]); fidx += 1
         else:
