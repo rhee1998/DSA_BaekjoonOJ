@@ -25,3 +25,28 @@ def FailListKMP(P):
             fail[i] = j
 
     return fail
+
+def FindPatternsKMP(T, P, fail=None):
+    # ==================================================
+    # Input(s)
+    # - T    : target string
+    # - P    : pattern of interest
+    # - fail : fail[j] is maximum of k <= j such that P[:k] == P[j-k+1:j+1]
+    #
+    # Output(s)
+    # - res  : list of starting positions where P is found
+    # ==================================================
+    if fail is None:
+        fail = FailListKMP(P)
+    
+    j, res = 0, []
+    for i in range(len(T)):
+        while j > 0 and T[i] != P[j]:
+            j = fail[j - 1]
+
+        if T[i] == P[j]: j += 1
+        if j == len(P):
+            res.append(i - j + 1)
+            j = fail[j - 1]
+
+    return res
