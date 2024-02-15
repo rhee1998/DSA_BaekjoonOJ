@@ -18,3 +18,22 @@ def Sieve(N):
                 is_prime[j] = 0
 
     return is_prime
+
+
+def PrimeList(N, is_prime=None):
+    # ==================================================
+    # Input(s)
+    # - N        : maximum number to study primality
+    #
+    # Output(s)
+    # - res      : list of primes lesser or or equal to N
+    # ==================================================
+    res = []
+    
+    if is_prime is None:
+        is_prime = Sieve(N)
+    
+    for x in range(1, N + 1):
+        if is_prime[x] == 1: res.append(x)
+    
+    return res
