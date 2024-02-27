@@ -66,11 +66,25 @@ def ConvexHull2D(pts):
     P = GeneralizedMergeSort(P, O)
 
     # Graham's method (stack)
-    CH = [O, P[0]]
+    hull = [O, P[0]]
     for pt in P[1:]:
-        while len(CH) >= 2:
-            if CCW(CH[-2], CH[-1], pt) > 0: break
-            else: CH.pop()
-        CH.append(pt)
+        while len(hull) >= 2:
+            if CCW(hull[-2], hull[-1], pt) > 0: break
+            else: hull.pop()
+        hull.append(pt)
 
-    return CH
+    return hull
+
+# Area of Polygon (Points given in CCW order)
+def Area(hull, double=True):
+    if len(hull) <= 2:
+        return 0
+    
+    area = 0
+    for i in range(1, len(hull) - 1):
+        OP = (hull[i][0] - hull[0][0], hull[i][1] - hull[0][1])
+        OQ = (hull[i + 1][0] - hull[0][0], hull[i + 1][1] - hull[0][1])
+        area += OP[0] * OQ[1] - OP[1] * OQ[0]
+    
+    if double: return area
+    return area / 2.0
