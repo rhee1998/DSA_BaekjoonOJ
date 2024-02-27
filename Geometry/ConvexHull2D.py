@@ -88,3 +88,11 @@ def Area(hull, double=True):
     
     if double: return area
     return area / 2.0
+
+# Determines whether X is inside hull
+def InsideHull(X, hull):
+    N = len(hull)
+    for i in range(N):
+        if CCW(X, hull[i], hull[(i + 1) % N]) < 0:
+            return False
+    return True
