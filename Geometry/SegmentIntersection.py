@@ -2,7 +2,7 @@
 # Segment Intersection #
 # ==================== #
 
-def Compare(A, B):
+def ComparePoints2D(A, B):
     if A[0] < B[0] or (A[0] == B[0] and A[1] < B[1]): return +1
     if A[0] > B[0] or (A[0] == B[0] and A[1] > B[1]): return -1
     return 0
@@ -39,9 +39,9 @@ def Intersect(A, B, C, D):
     if ccw_ABC * ccw_ABD < 0: return True
     if ccw_CDA * ccw_CDB < 0: return True
 
-    if Compare(A, B) < 0: A, B = B, A
-    if Compare(C, D) < 0: C, D = D, C
+    if ComparePoints2D(A, B) < 0: A, B = B, A
+    if ComparePoints2D(C, D) < 0: C, D = D, C
 
-    if Compare(B, C) > 0 or Compare(D, A) > 0:
+    if ComparePoints2D(B, C) > 0 or ComparePoints2D(D, A) > 0:
         return False
     return True
