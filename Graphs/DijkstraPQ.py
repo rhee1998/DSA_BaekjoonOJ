@@ -27,6 +27,31 @@ def Dijkstra(start, N, G, INF=10**30):
                 heapq.heappush(que, (dists[next], next))
     return dists
 
+# Generalized node names
+def Dijkstra(start, G, INF=INF):
+    # --------------------------------------------------
+    # Input(s)  : starting node ID, number of nodes, graph
+    # Output(s) : minimum distances from start to each node
+    # --------------------------------------------------
+    # Initialize PQ
+    que = []
+    heapq.heappush(que, (0, start))
+
+    # Initialize result
+    dists = {v: INF for v in G.keys()}
+    dists[start] = 0
+
+    # Iterate over PQ
+    while que:
+        cost, curr = heapq.heappop(que)
+        if dists[curr] < cost: continue
+        for next, dist in G[curr]:
+            tmp = cost + dist
+            if tmp < dists[next]:
+                dists[next] = tmp
+                heapq.heappush(que, (dists[next], next))
+    return dists
+
 
 def DijkstraPath(start, N, G, INF=10**30):
     # --------------------------------------------------
