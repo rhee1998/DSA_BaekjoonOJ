@@ -10,6 +10,7 @@ TREE, RANG, LAZY = [], [], []
 
 # Build Segment Tree
 def Build(A, default=0):
+    global TREE, RANG, LAZY
     N = 1 << (math.ceil(math.log2(len(A))))
     A += [default] * (N - len(A))
 
@@ -25,10 +26,9 @@ def Build(A, default=0):
         TREE[i] = TREE[i << 1] + TREE[(i << 1) | 1]
         RANG[i] = (RANG[i << 1][0], RANG[(i << 1) | 1][1])
 
-    return TREE, RANG, LAZY
-
 # Update Lazy
 def UpdateLazy(node):
+    global TREE, RANG, LAZY
     if LAZY[node] != 0:
         S, E = RANG[node]
         TREE[node] += LAZY[node] * (E - S + 1)
@@ -37,10 +37,9 @@ def UpdateLazy(node):
             LAZY[(node << 1) | 1] += LAZY[node]
         LAZY[node] = 0
 
-    return None
-
 # Modify Range : Add val to A[L], A[L + 1], ..., A[R]
 def UpdateRange(L, R, val):
+    global TREE, RANG, LAZY
     que, back = deque([1]), []
     while que:
         node = que.popleft()
@@ -65,10 +64,9 @@ def UpdateRange(L, R, val):
         try: TREE[node] = TREE[(node << 1)] + TREE[(node << 1) | 1]
         except: continue
 
-    return None
-
 # Query : Sum of A[L], A[L + 1], ..., A[R]
 def Query(L, R):
+    global TREE, RANG, LAZY
     res = 0
     que = deque([1])
     while que:
