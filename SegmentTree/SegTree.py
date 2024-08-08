@@ -31,7 +31,7 @@ def Query(L, R):
     while L <= R:
         if L == R: res += TREE[L]; break
         if L & 1 == 1: res += TREE[L]; L += 1; continue
-        if R & 1 == 1: res += TREE[R]: R -= 1; continue
+        if R & 1 == 1: res += TREE[R]; R -= 1; continue
         L >>= 1; R >>= 1
     
     return res
