@@ -14,7 +14,7 @@ def Compare(x, y):
         else: idx += 1
     return True
 
-def GeneralizedMergeSort(A):
+def GeneralizedMergeSort(A, compare_fn):
     # ==================================================
     # Input(s)  : array to sort
     # Output(s) : sorted array
@@ -27,7 +27,7 @@ def GeneralizedMergeSort(A):
     fidx, bidx, R = 0, 0, []
 
     while fidx < L//2 and bidx < L - L//2:
-        if Compare(F[fidx], B[bidx]):
+        if compare_fn(F[fidx], B[bidx]):
             R.append(F[fidx]); fidx += 1
         else:
             R.append(B[bidx]); bidx += 1
