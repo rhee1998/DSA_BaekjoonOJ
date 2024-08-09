@@ -29,7 +29,7 @@ def MatMul(A, B, MOD=MOD):
             tmp = 0
             for j in range(M):
                 tmp = (tmp + A[i][j] * B[j][k]) % MOD
-            R[i][j] = tmp
+            R[i][k] = tmp
     
     return R
 
