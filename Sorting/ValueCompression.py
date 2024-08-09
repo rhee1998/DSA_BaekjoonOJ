@@ -7,8 +7,8 @@ def CompareValues(a, b):
 
 # Coordinate compression
 def Compress(A):
-    A = list(set(A))
-    X = GeneralizedMergeSort(A, CompareValues)
+    B = list(set(A))
+    X = GeneralizedMergeSort(B, CompareValues)
     dict_ = {x: j for j, x in enumerate(X)}
     A = [dict_[x] for x in A]
 
