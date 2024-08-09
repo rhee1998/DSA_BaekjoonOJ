@@ -15,8 +15,8 @@ def Compress(A):
     return A, dict_
 
 # Example
-A = [1, 3, 9, 7, 5]
+A = [1, 3, 9, 7, 7, 5]
 B, dict_ = Compress(A)
 
-print(B)        # [0, 1, 4, 3, 2]
+print(B)        # [0, 1, 4, 3, 3, 2]
 print(dict_)    # {1: 0, 3: 1, 5: 2, 7: 3, 9: 4}
