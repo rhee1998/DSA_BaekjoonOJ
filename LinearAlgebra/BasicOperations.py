@@ -2,6 +2,14 @@
 # Basic Matrix Operations #
 # ======================= #
 
+# Identity Matrix
+def MatIdentity(N):
+    I = [[0 for _ in range(N)] for _ in range(N)]
+    for i in range(N):
+        I[i][i] = 1
+    
+    return I
+
 # Matrix Addition
 def MatAdd(A, B, MOD=MOD):
     N, M = len(A), len(A[0])
@@ -24,3 +32,15 @@ def MatMul(A, B, MOD=MOD):
             R[i][j] = tmp
     
     return R
+
+# Power of Matrix
+def MatPow(A, K, MOD=MOD):
+    N = len(A)
+    if K == 0: return MatIdentity(N)
+    if K == 1: return A
+
+    tmp = MatPow(A, K // 2, MOD=MOD)
+    tmp = MatMul(tmp, tmp, MOD=MOD)
+    
+    if K % 2 == 0: return tmp
+    return MatMul(A, tmp, MOD=MOD)
