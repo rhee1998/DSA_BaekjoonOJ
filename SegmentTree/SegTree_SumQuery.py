@@ -1,9 +1,6 @@
-########################
-##### Segment Tree #####
-########################
-
-# Without lazy propagation
-# Range sum query
+# ====================== #
+# Segment Tree Sum Query #
+# ====================== #
 
 import sys, math
 input = sys.stdin.readline
