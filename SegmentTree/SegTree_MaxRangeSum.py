@@ -4,6 +4,9 @@
 import sys, math
 input = sys.stdin.readline
 
+# Segment Tree, Max Consecutive Range Sum
+# TREE[range=[S, E]] = (sum_XY, sum_SX, sum_XE, sum_SE)
+
 TREE = []
 def MergeNode(node_L, node_R):
     XY_L, SX_L, XE_L, SE_L = node_L
