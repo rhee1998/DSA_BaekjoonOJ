@@ -1,7 +1,6 @@
-########################################
-##### Lowest Common Ancestor (LCA) #####
-########################################
-
+# ============================ #
+# Lowest Common Ancestor (LCA) #
+# ============================ #
 import sys, math
 from collections import deque
 input = sys.stdin.readline
