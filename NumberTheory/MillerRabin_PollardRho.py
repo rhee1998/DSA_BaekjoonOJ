@@ -94,6 +94,28 @@ def factorize(N):
 
     return factor_dict
 
+def phi(N):
+    res = N
+    while N > 1:
+        p = pollard_rho(N)
+        res = (res // p) * (p - 1)
+        while N % p == 0: N //= p
+
+    return res
+
+def divisor_list(N):
+    factor_dict = factorize(N)
+    p_list = [p for p in factor_dict.keys()]
+    e_list = [list(range(factor_dict[p] + 1)) for p in p_list]
+
+    res = []
+    for e_sample in list(itertools.product(*e_list)):
+        tmp = 1
+        for p, e in zip(p_list, e_sample):
+            tmp *= (p ** e)
+        res.append(tmp)
+
+    return sorted(res)
 
 # =========== #
 # Sample Code #
