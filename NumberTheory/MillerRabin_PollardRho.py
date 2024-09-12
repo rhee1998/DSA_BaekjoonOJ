@@ -2,7 +2,7 @@
 # Miller-Rabin Primality Test #
 # Pollard-Rho Factorization   #
 # =========================== #
-import sys, math, random
+import sys, math, random, itertools
 input = sys.stdin.readline
 
 # Greatest Common Divisor
